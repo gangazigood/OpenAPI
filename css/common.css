@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+
+
+@font-face {
+    font-family: 'OngleipParkDahyeon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+
+
+*{margin:0; padding:0; box-sizing:border-box;}
+ul, ol {list-style:none;}
+a {text-decoration:none; color: #333;}
+
+body {font-family: 'OngleipParkDahyeon';}
+.container {width: 1120px; margin: 0 auto; background-color: #aaa; }
+
+/*header */
+header {width: 100%; background: gold;}
+.header_top {width: 100%; height: 60px; display: flex; justify-content: space-between; align-items: center;  background: orange;}
+.logo {font-size: 24px; font-weight: bold;}
+.h_right {display: flex; align-items: center;}
+.search {width: 275px; height: 35px; border:1px solid blue; margin:0 auto; display:flex;
+align-items:center; padding:0 8px;}
+.mypage {font-size: 14px;}
+
+
+/* footer */
+footer {width: 100%; height: 350px; background-color: orange;
+}
