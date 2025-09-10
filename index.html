@@ -5,20 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>교보문고</title>
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/index.css">
+
 </head>
 
 <body>
   <header>
     <div class="header_top">
-      <div class="container">      
+      <div class="container">
         <div class="menu2">
-          <a href="#">매장안내</a>
-          <a href="#">회원혜택</a>
+          <a href="#">매장안내&#9662;</a>
+          <a href="#">회원혜택&#9662;</a>
         </div>
         <div class="bar">
           <a href="#">로그인</a>
@@ -27,14 +26,14 @@
           <a href="#">고객센터</a>
           <a href="#">주문배송</a>
           <a href="#">00</a>
-        </div>      
-      </div>      
+        </div>
+      </div>
     </div>
 
     <div class="top_2">
-        <div class="logo">여기에교보문고로고</div>
-        <div class="search">검색하세요</div>
-        <div class="banner"></div>
+      <div class="logo"><img src="./mainlogo.png" alt="로고"></div>
+      <div class="search">검색하세요</div>
+      <div class="banner"></div>
     </div>
     <div class="header_nav">
       <div class="container">
@@ -47,8 +46,7 @@
             <li><a href="#">기프트</a></li>
             <li><a href="#">음반</a></li>
             <li><a href="#">중고장터</a></li>
-            <li><a href="#">국내도서</a></li>
-            <li><a href="#">기타</a></li>
+            <li><a href="#">플러스</a></li>
           </ul>
         </nav>
         <div class="category">
@@ -61,46 +59,94 @@
         </div>
       </div>
     </div>
-
-    
-
-    </div>
-    </div>
   </header>
 
+  <!-- 슬라이더 -->
   <div id="slider">
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+
+    <div id="slider_main">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="slider_btn">
+      <ul>
+        <li>요즘 이 책</li>
+        <li>핫이슈</li>
+        <li>새로나온 책</li>
+        <li>기획/테마</li>
+        <li>eBook</li>
+        <li>한정특가</li>
+      </ul>
     </div>
   </div>
+
+  <section>
+    <div id="sec1"></div>
+    <div class="contentsbox"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
 
   <footer>
     <div class="container"></div>
   </footer>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- 슬라이더 JS -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+    $(function () {
+      var slider_bgc = ["#e4f1d3", "#fff294", "#a8daff", "#daecf0", "#f8f4d7", "#fbeaf0"];
+      var slider_main_box = $("#slider_main > div");
+
+      $("#slider_btn > ul > li").mouseover(function () {
+        $("#slider").css("background-color", slider_bgc[$(this).index()]);
+        slider_main_box.stop().hide();
+        slider_main_box.eq($(this).index()).stop().show();
+
+        $("#slider_btn > ul > li").removeClass("slider_btn_hover");
+        $(this).addClass("slider_btn_hover");
+      }).mouseleave(function () {
+        $("#slider_btn > ul > li").removeClass("slider_btn_hover");
+        $(this).addClass("slider_btn_hover");
+      });
+
+      var i = 0;
+      function slider_loop() {
+        i++;
+        if (i > $("#slider_main > div:last").index()) {
+          i = 0;
+        }
+        $("#slider").css("background-color", slider_bgc[i]);
+        slider_main_box.stop().hide();
+        slider_main_box.eq(i).stop().show();
+        $("#slider_btn > ul > li").removeClass("slider_btn_hover");
+        $("#slider_btn > ul > li").eq(i).addClass("slider_btn_hover");
+      }
+      setInterval(slider_loop, 3000);
     });
   </script>
 </body>
