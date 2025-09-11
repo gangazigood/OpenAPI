@@ -1,15 +1,3 @@
-@charset "utf-8";
-
-
-
-@font-face {
-    font-family: 'OngleipParkDahyeon';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
-    font-weight: normal;
-    font-display: swap;
-}
-
-
 
 
 * {
@@ -47,10 +35,9 @@ header {
 }
 
 .header_top {
-    width: 1520px;
+    width: 100%;
     height: 30px;
     background: #ddd;
-    ;
     border-bottom: 1px solid #f8f8f8;
 }
 
@@ -109,11 +96,25 @@ header {
 }
 
 .gogo {
-    width: 40%;
+    width: auto;
+}
+
+.gogo ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.gogo ul li {
+    list-style: none;
 }
 
 .gogo a {
     color: #fff;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .header_nav ul {
@@ -122,11 +123,17 @@ header {
 }
 
 .category {
-    width: 15%;
+    width: auto;
+}
+
+.category ul {
+    display: flex;
+    gap: 20px;
 }
 
 .category a {
     color: #ddd;
+    white-space: nowrap;
 }
 
 
@@ -208,4 +215,290 @@ footer {
     color: #fff;
     border-color: #5E5B9E;
 
+}
+
+
+
+
+
+
+
+
+
+
+:root {
+    --font-roboto: 'Roboto';
+    --font-noto-sans-kr: 'Noto Sans KR';
+}
+
+body {
+    font-family: var(--font-roboto), var(--font-noto-sans-kr), PingFang SC, Apple SD Gothic Neo, Microsoft YaHei UI, Malgun Gothic, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header_top {
+    width: 100%;
+    max-width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+#bigs1,
+#big2,
+#bigs3,
+#bigs4,
+#bigs5 {
+    padding: 60px 0;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#bigs1 {
+    background: #f9f9fb;
+}
+
+#big2 {
+    background: #fff;
+}
+
+#bigs3 {
+    background: #f5f6f8;
+}
+
+#bigs4 {
+    background: #fff;
+}
+
+#bigs5 {
+    background: #fafafa;
+    border-bottom: none;
+}
+
+.stitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #333;
+}
+
+.stitle h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+}
+
+.stitle ul {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.stitle ul li {
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.stitle ul li:first-child {
+    color: #fff;
+    background: #5E5B9E;
+    border-color: #5E5B9E;
+}
+
+.stitle ul li:hover {
+    color: #fff;
+    background: #5E5B9E;
+    border-color: #5E5B9E;
+}
+
+.bookex {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.realbook {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.realbook:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#bigs1 .realbook {
+    height: 320px;
+    position: relative;
+}
+
+#bigs1 .realbook::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+
+#big2 .realbook {
+    height: 300px;
+    position: relative;
+}
+
+#big2 .realbook::after {
+    content: 'big2';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4757;
+    color: white;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+#bigs3 .realbook {
+    height: 280px;
+    position: relative;
+    counter-increment: bigs3-counter;
+}
+
+#bigs3 .bookex {
+    counter-reset: bigs3-counter;
+}
+
+#bigs3 .realbook::before {
+    content: counter(bigs3-counter);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: #5E5B9E;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+.bigs4main {
+    display: flex;
+    gap: 40px;
+}
+
+.bigs4recent {
+    flex: 1;
+    min-width: 250px;
+}
+
+.bigs4recent h3,
+.bigs4good h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bigs4recent .realbook {
+    height: 350px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bigs4good {
+    flex: 3;
+}
+
+.bigs4good .bookex {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.bigs4good .realbook {
+    height: 260px;
+}
+
+.bigs5main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.realbig5 {
+    height: 250px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.realbig5:hover {
+    transform: scale(1.05);
+}
+
+.realbig5::after {
+    content: 'bigs5';
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 2px;
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+    .bookex {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bigs4good .bookex {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .bookex {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bigs5main {
+        grid-template-columns: 1fr;
+    }
+
+    .bigs4main {
+        flex-direction: column;
+    }
+
+    .bigs4good .bookex {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
