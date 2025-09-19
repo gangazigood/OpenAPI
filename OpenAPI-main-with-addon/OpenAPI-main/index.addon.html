@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교보문고</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./css/addon.css">
+  <script src="js/common/Header.js"></script> //변수선언해야댐
+  <script src="js/main/Banner.js"></script>
+  <script src="js/main/Best.js"></script>
+  <script src="js/main/Slider.js"></script>
+  <script src="js/main/New.js"></script>
+  <script src="js/main/Only.js"></script>
+  <script src="js/main/Today.js"></script>
+  <script src="js/main/Other.js"></script>
+  <script src="js/main/JsonBest.js"></script>
+  <script src="js/main/JsonNew.js"></script>
+  <script src="js/main/JsonRecom.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header_top">
+      <div class="container">
+        <div class="menu2">
+          <a href="#">매장안내<i class="fas fa-chevron-down"></i></a>
+          <ul id="storemenu">
+            <li><span>서울</span></li>
+            <ul>
+                <li><a href="#">광교점</a>
+                <li><a href="#">강남점</a>
+                <li><a href="#">동대문 바로드림센터</a>
+                <li><a href="#">다큐브시티</a>
+                <li><a href="#">목동점</a>
+                <li><a href="#">서울대 교내서점</a>
+                <li><a href="#">수유 바로드림센터</a>
+                <li><a href="#">영등포점</a>
+                <li><a href="#">은평 바로드림센터</a>
+                <li><a href="#">이화여대 교내서점</a>
+            <li><span>수도권</span>
+            </ul>
+          <a href="#">회원혜택<i class="fas fa-chevron-down"></i></a>
+          //ul하나해야댐
+        </div>
+        <div class="bar">
+          <a href="#">로그인</a>
+          <a href="#">회원가입</a>
+          <a href="#">출석체크</a>
+          <a href="#">고객센터</a>
+          <a href="#">주문배송</a>
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="top_2">
+      <div class="logo"><img src="css/img/mainlogo.png" alt="로고"></div>
+      <div class="search"> <input id="searchinput" type="text" placeholder="통합검색">
+        <img src="css/img/searchicon.gif" alt="searchicon">
+      </div>
+      <div class="banner"></div>
+    </div>
+    <div class="header_nav">
+      <div class="container">
+        <nav class="gogo">
+          <ul>
+            <li><a href="#">국내도서</a></li>
+            <li><a href="#">외국도서</a></li>
+            <li><a href="#">eBook</a></li>
+            <li><a href="#">웹소설</a></li>
+            <li><a href="#">기프트</a></li>
+            <li><a href="#">음반</a></li>
+            <li><a href="#">중고장터</a></li>
+            <li><a href="#">플러스</a></li>
+          </ul>
+        </nav>
+        <div class="category">
+          <ul>
+            <li><a href="">베스트</a></li>
+            <li><a href="">신상품</a></li>
+            <li><a href="">이벤트</a></li>
+            <li><a href="">사은품</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 슬라이더 -->
+  <div id="slider">
+    <div class="contentsbox">
+      <div id="slider1">
+        <div class="sliderbox1">
+          <img src="./css/img/slider1-1.jpg" alt="slideimage">
+        </div>
+        <div class="sliderbox1">
+          <img src="css/img/slider1-2.jpg" alt="slideimage">
+        </div>
+        <div class="sliderbox1">
+          <img src="css/img/slider1-3.jpg" alt="slideimage">
+        </div>
+        <div class="sliderbox3">
+          <img src="css/img/slider1-4-1.jpg" alt="slideimage">
+          <img src="css/img/slider1-4-2.jpg" alt="slideimage">
+          <img src="css/img/slider1-4-3.jpg" alt="slideimage">
+        </div>
+        <div class="sliderbox1">
+          <img src="css/img/slider1-5.jpg" alt="slideimage">
+        </div>
+        <div class="sliderbox3">
+          <img src="css/img/slider1-6-1.jpg" alt="slideimage">
+          <img src="css/img/slider1-6-2.jpg" alt="slideimage">
+          <img src="css/img/slider1-6-3.jpg" alt="slideimage">
+        </div>
+      </div>
+
+      <div id="slider2">
+        <div id="slider2text">
+          <h3>출판사 북캐스트</h3>
+          <span>거의 모든, 책 이야기</span>
+          <img src="css/img/slider2.jpg" alt="slider2img">
+          <p>한가함을 참지 못하는 습관</p>
+          <p>바쁨 중독에서 벗어나는 방법</p>
+        </div>
+        <div id="slider2list">
+          <ul>
+            <li><a href="#">- 외국인 질색하는 한국기업문화</a></li>
+            <li><a href="#">- 아내의 눈물을 멈추게 만든</a></li>
+            <li><a href="#">- 인간의 지능은 어디로 갈 것인가</a></li>
+            <li><a href="#">- 미니멀 라이프가 어려워요?</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+
+
+
+
+      <div id="slider_btn">
+        <ul>
+          <li class="slider_btn_hover">요즘 이 책</li>
+          <li>핫이슈</li>
+          <li>새로나온 책</li>
+          <li>기획/테마</li>
+          <li>eBook</li>
+          <li>한정특가</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <section>
+
+    <div id="bigs1">
+      <div class="container">
+        <div class="stitle">
+          <h2>오늘의 책</h2>
+          <ul>
+            <li>국내도서</li>
+            <li>eBook</li>
+            <li>sam</li>
+          </ul>
+        </div>
+        <div class="bookex">
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="big2">
+      <div class="container">
+        <div class="stitle">
+          <h2>화제의 신간</h2>
+          <ul>
+            <li>국내도서</li>
+            <li>외국도서</li>
+            <li>eBook</li>
+          </ul>
+        </div>
+        <div class="bookex">
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="bigs3">
+      <div class="container">
+        <div class="stitle">
+          <h2>베스트 셀러</h2>
+          <ul>
+            <li>교보문고종합</li>
+            <li>인터넷일간</li>
+            <li>외국도서</li>
+            <li>eBook</li>
+          </ul>
+        </div>
+        <div class="bookex">
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+          <div class="realbook"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="bigs4">
+      <div class="container">
+        <div class="stitle">
+          <h2>실시간 추천</h2>
+        </div>
+        <div class="bigs4main">
+          <div class="bigs4recent">
+            <h3>최근 본 상품</h3>
+            <div class="realbook"></div>
+          </div>
+          <div class="bigs4good">
+            <h3>추천 상품</h3>
+            <div class="bookex">
+              <div class="realbook"></div>
+              <div class="realbook"></div>
+              <div class="realbook"></div>
+              <div class="realbook"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="bigs5">
+      <div class="container">
+        <div class="stitle">
+          <h2>이벤트</h2>
+        </div>
+        <div class="bigs5main">
+          <div class="realbig5"></div>
+          <div class="realbig5"></div>
+          <div class="realbig5"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="container"></div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/slider1.js"></script>
+</body>
+
+</html>
